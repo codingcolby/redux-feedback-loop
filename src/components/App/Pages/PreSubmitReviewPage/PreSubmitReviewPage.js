@@ -5,10 +5,10 @@ import axios from 'axios';
 class PreSubmitReviewPage extends Component {
 	submitFeedback = (event) => {
 		const feedback = {
-			feeling: this.props.store.feedbackReducer.feeling,
-			understanding: this.props.store.feedbackReducer.understanding,
-			support: this.props.store.feedbackReducer.support,
-			comments: this.props.store.feedbackReducer.comments,
+			feeling: this.props.store.feelingReducer.feeling,
+			understanding: this.props.store.understandingReducer.understanding,
+			support: this.props.store.supportReducer.support,
+			comments: this.props.store.commentsReducer.comments,
 		};
 
 		axios
