@@ -7,6 +7,12 @@ class FeelingPage extends Component {
 	};
 
 	onInputChange = (input) => (event) => {
+let input = [],
+
+		if (isNaN(input) || input < 1 || input > 5) {
+			text = "Rating not valid, please enter a number between 1 and 5";
+		  } 
+		  
 		this.setState(
 			{
 				[input]: event.target.value,
