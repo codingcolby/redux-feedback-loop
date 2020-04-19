@@ -18,8 +18,8 @@ class CommentsPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-COMMENT', payload: this.state });
-		this.props.history.push('/comments');
+		this.props.dispatch({ type: 'SET-COMMENTS', payload: this.state });
+		this.props.history.push('/feedbackreview');
 	};
 
 	render() {
