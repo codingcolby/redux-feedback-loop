@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { hashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import FeelingPage from '../Pages/FeelingPage/FeelingPage';
 import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentPage from '../Pages/CommentPage/CommentPage';
+import CommentPage from '../Pages/SubmissionSuccessPage/CommentPage';
 
 class App extends Component {
 	render() {
@@ -18,10 +19,15 @@ class App extends Component {
 						</h4>
 					</header>
 					<br />
-					<Route exact path='/' component={FeelingPage} />
-					<Route exact path='/' component={UnderstandingPage} />
-					<Route exact path='/' component={SupportPage} />
-					<Route exact path='/' component={CommentPage} />
+					<Route exact path='/feeling' component={FeelingPage} />
+					<Route exact path='/understanding' component={UnderstandingPage} />
+					<Route exact path='/support' component={SupportPage} />
+					<Route exact path='/comment' component={CommentPage} />
+					<Route
+						exact
+						path='/submissionsuccess'
+						component={SubmissionSuccessPage}
+					/>
 				</Router>
 			</div>
 		);
