@@ -23,10 +23,11 @@ class App extends Component {
 					<Route exact path='/understanding' component={UnderstandingPage} />
 					<Route exact path='/support' component={SupportPage} />
 					<Route exact path='/comments' component={CommentsPage} />
+					<Route exact path='/feedbackreview' component={PreSubmitReviewPage} />
 					<Route
 						exact
 						path='/submissionsuccess'
-						component={PreSubmissionSuccessPage}
+						component={SubmissionSuccessPage}
 					/>
 				</Router>
 			</div>
