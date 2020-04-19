@@ -4,8 +4,8 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import FeelingPage from '../Pages/FeelingPage/FeelingPage';
 import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
-import CommentPage from '../Pages/CommentPage/CommentPage';
-import CommentPage from '../Pages/SubmissionSuccessPage/CommentPage';
+import CommentsPage from '../Pages/CommentsPage/CommentsPage';
+import PreSubmissionSuccessPage from '../Pages/PreSubmissionSuccessPage/PreSubmissionSuccessPage';
 
 class App extends Component {
 	render() {
@@ -22,11 +22,11 @@ class App extends Component {
 					<Route exact path='/feeling' component={FeelingPage} />
 					<Route exact path='/understanding' component={UnderstandingPage} />
 					<Route exact path='/support' component={SupportPage} />
-					<Route exact path='/comment' component={CommentPage} />
+					<Route exact path='/comments' component={CommentsPage} />
 					<Route
 						exact
 						path='/submissionsuccess'
-						component={SubmissionSuccessPage}
+						component={PreSubmissionSuccessPage}
 					/>
 				</Router>
 			</div>
