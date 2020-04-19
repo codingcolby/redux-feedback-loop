@@ -1,6 +1,5 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { render } from 'react-dom';
 
 class FeelingPage extends Component {
 	state = {
@@ -36,7 +35,7 @@ class FeelingPage extends Component {
 				<input
 					type='number'
 					required
-					onChange={this.onInputChange('feedback')}
+					onChange={this.onInputChange('feeling')}
 					placeholder='Rank your feeling'
 				/>
 				)}
