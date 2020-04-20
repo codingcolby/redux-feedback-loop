@@ -5,7 +5,8 @@ import FeelingPage from '../Pages/FeelingPage/FeelingPage';
 import UnderstandingPage from '../Pages/UnderstandingPage/UnderstandingPage';
 import SupportPage from '../Pages/SupportPage/SupportPage';
 import CommentsPage from '../Pages/CommentsPage/CommentsPage';
-import PreSubmissionSuccessPage from '../Pages/PreSubmissionSuccessPage/PreSubmissionSuccessPage';
+import PreSubmitReviewPage from '../Pages/PreSubmitReviewPage/PreSubmitReviewPage';
+import SubmissionSuccessPage from '../Pages/SubmissionSuccessPage/SubmissionSuccessPage';
 
 class App extends Component {
 	render() {
@@ -19,7 +20,7 @@ class App extends Component {
 						</h4>
 					</header>
 					<br />
-					<Route exact path='/feeling' component={FeelingPage} />
+					<Route exact path='/' component={FeelingPage} />
 					<Route exact path='/understanding' component={UnderstandingPage} />
 					<Route exact path='/support' component={SupportPage} />
 					<Route exact path='/comments' component={CommentsPage} />

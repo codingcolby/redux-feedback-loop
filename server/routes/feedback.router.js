@@ -7,18 +7,18 @@ router.post('/', (req, res) => {
 
 	const queryString = `INSERT INTO "feedback"(
     feeling, understanding, support, comments)
-    VALUES ($1, $2, $3, $4)`;
+	VALUES ($1, $2, $3, $4)`;
 
-	let feedbacks = '';
+	// let feedbacks = '';
 
-	for (let feedback of req.body.feedbacks) {
-		feedbacks += `${feeling} ${understanding} ${support} ${comments},`;
-	}
+	// for (let feedback of req.body.feedbacks) {
+	// 	feedbacks += `${feeling.feeling} ${understanding.understanding} ${support.support} ${comments.comments},`;
+	// }
 
 	pool
 		.query(queryString, [
-			req.body.feeling,
-			req.body.understanding,
+			req.body.feeling.feeling,
+			req.body.understanding.understanding,
 			req.body.support,
 			req.body.comments,
 		])

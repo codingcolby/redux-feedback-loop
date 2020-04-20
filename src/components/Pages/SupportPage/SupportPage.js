@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class CommentsPage extends Component {
+class SupportPage extends Component {
 	state = {
-		comments: '',
+		support: '',
 	};
 
 	onInputChange = (input) => (event) => {
@@ -18,8 +18,8 @@ class CommentsPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-COMMENTS', payload: this.state });
-		this.props.history.push('/feedbackreview');
+		this.props.dispatch({ type: 'SET-SUPPORT', payload: this.state });
+		this.props.history.push('/comments');
 	};
 
 	render() {
@@ -27,13 +27,17 @@ class CommentsPage extends Component {
 
 		return (
 			<div>
-				<h2>Any comments you want to leave?</h2>
+				<h2>How well are you being supported?</h2>
+				<p>
+					Please select a value between 1-5
+					<br /> 1 = not at all and 5 = You got me!
+				</p>
 				<input
-					type='text'
-					onChange={this.onInputChange('comments')}
-					placeholder='Please share - help us help you!'
+					type='number'
+					required
+					onChange={this.onInputChange('support')}
+					placeholder='Rank your support'
 				/>
-				)}
 				<button onClick={this.onNextClick}>Next</button>
 			</div>
 		);
@@ -42,4 +46,4 @@ class CommentsPage extends Component {
 
 const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(CommentsPage);
+export default connect(mapStoreToProps)(SupportPage);

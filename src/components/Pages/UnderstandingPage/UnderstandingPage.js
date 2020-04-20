@@ -19,7 +19,7 @@ class UnderstandingPage extends Component {
 
 	onNextClick = (event) => {
 		this.props.dispatch({ type: 'SET-UNDERSTANDING', payload: this.state });
-		this.props.history.push('/understanding');
+		this.props.history.push('/support');
 	};
 
 	render() {
@@ -29,8 +29,8 @@ class UnderstandingPage extends Component {
 			<div>
 				<h2>How well are you understanding the content today?</h2>
 				<p>
-					Please select a value between 1-5 with 1 = not at all and 5 = I got
-					this!
+					Please select a value between 1-5
+					<br /> 1 = not at all and 5 = I got this!
 				</p>
 				<input
 					type='number'
@@ -38,7 +38,6 @@ class UnderstandingPage extends Component {
 					onChange={this.onInputChange('understanding')}
 					placeholder='Rank your understanding'
 				/>
-				)}
 				<button onClick={this.onNextClick}>Next</button>
 			</div>
 		);

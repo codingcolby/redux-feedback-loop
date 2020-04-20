@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class SupportPage extends Component {
+class FeelingPage extends Component {
 	state = {
-		support: '',
+		feeling: '',
 	};
 
 	onInputChange = (input) => (event) => {
@@ -18,8 +18,8 @@ class SupportPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-SUPPORT', payload: this.state });
-		this.props.history.push('/support');
+		this.props.dispatch({ type: 'SET-FEELING', payload: this.state });
+		this.props.history.push('/understanding');
 	};
 
 	render() {
@@ -27,18 +27,16 @@ class SupportPage extends Component {
 
 		return (
 			<div>
-				<h2>How well are you being supported?</h2>
+				<h2>How are you feeling today?</h2>
 				<p>
-					Please select a value between 1-5 with 1 = not at all and 5 = You got
-					me!
+					Please select a value between 1-5
+					<br /> 1 = not so good and 5 = fantastic
 				</p>
 				<input
 					type='number'
-					required
-					onChange={this.onInputChange('support')}
-					placeholder='Rank your support'
+					onChange={this.onInputChange('feeling')}
+					placeholder='Rank your feeling'
 				/>
-				)}
 				<button onClick={this.onNextClick}>Next</button>
 			</div>
 		);
@@ -47,4 +45,4 @@ class SupportPage extends Component {
 
 const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(SupportPage);
+export default connect(mapStoreToProps)(FeelingPage);

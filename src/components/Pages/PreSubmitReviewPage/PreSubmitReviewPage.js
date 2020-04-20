@@ -26,12 +26,12 @@ class PreSubmitReviewPage extends Component {
 		return (
 			<div>
 				<h2>Review Your Feedback</h2>
-				<ul>
-					<li>Feeling: {this.props.feedbackReducer.feeling}</li>
-					<li>Understanding: {this.props.feedbackReducer.understanding}</li>
-					<li>Support: {this.props.feedbackReducer.support}</li>
-					<li>Comments: {this.props.feedbackReducer.comments}</li>
-				</ul>
+				<p>Feeling: {this.props.store.feelingReducer.feeling}</p>
+				<p>
+					Understanding: {this.props.store.understandingReducer.understanding}
+				</p>
+				<p>Support: {this.props.store.supportReducer.support}</p>
+				<p>Comments: {this.props.store.commentsReducer.comments}</p>
 
 				<button onClick={this.submitFeedback}>Submit Feedback</button>
 			</div>
