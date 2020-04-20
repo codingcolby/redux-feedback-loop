@@ -18,7 +18,7 @@ class FeelingPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-FEELING', payload: this.state });
+		this.props.dispatch({ type: 'SET_FEELING', payload: this.state });
 		this.props.history.push('/understanding');
 	};
 

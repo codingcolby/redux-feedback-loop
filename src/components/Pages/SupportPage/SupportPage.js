@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 class SupportPage extends Component {
 	state = {
-		support: '',
+		currentsupport: {
+			support: '',
+		},
 	};
 
 	onInputChange = (input) => (event) => {
@@ -18,7 +20,7 @@ class SupportPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-SUPPORT', payload: this.state });
+		this.props.dispatch({ type: 'SET_SUPPORT', payload: this.state });
 		this.props.history.push('/comments');
 	};
 

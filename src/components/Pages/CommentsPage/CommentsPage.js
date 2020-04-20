@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 class CommentsPage extends Component {
 	state = {
-		comments: '',
+		currentcomments: {
+			comments: '',
+		},
 	};
 
 	onInputChange = (input) => (event) => {
@@ -18,7 +20,7 @@ class CommentsPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-COMMENTS', payload: this.state });
+		this.props.dispatch({ type: 'SET_COMMENTS', payload: this.state });
 		this.props.history.push('/feedbackreview');
 	};
 

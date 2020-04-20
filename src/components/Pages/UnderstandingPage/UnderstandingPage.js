@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 
 class UnderstandingPage extends Component {
 	state = {
-		understanding: '',
+		currentunderstanding: {
+			understanding: '',
+		},
 	};
 
 	onInputChange = (input) => (event) => {
@@ -18,7 +20,7 @@ class UnderstandingPage extends Component {
 	};
 
 	onNextClick = (event) => {
-		this.props.dispatch({ type: 'SET-UNDERSTANDING', payload: this.state });
+		this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: this.state });
 		this.props.history.push('/support');
 	};
 
