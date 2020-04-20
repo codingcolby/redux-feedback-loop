@@ -22,3 +22,11 @@
 	font-weight: bold;
 	font-style: italic;
 }
+
+input {
+	margin-right: 10px;
+}
+
+.commentsinput {
+	width: 250px;
+}
