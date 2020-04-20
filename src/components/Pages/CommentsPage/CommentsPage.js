@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 
 class CommentsPage extends Component {
 	state = {
-		currentcomments: {
-			comments: '',
-		},
+		comments: '',
 	};
 
 	onInputChange = (input) => (event) => {

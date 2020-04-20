@@ -33,7 +33,7 @@ class PreSubmitReviewPage extends Component {
 				<p>Support: {this.props.store.supportReducer.support}</p>
 				<p>Comments: {this.props.store.commentsReducer.comments}</p>
 
-				<button onClick={this.submitFeedback}>Submit Feedback</button>
+				<button onClick={this.submitFeedback}>Submit</button>
 			</div>
 		);
 	}

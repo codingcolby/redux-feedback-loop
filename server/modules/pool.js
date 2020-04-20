@@ -9,10 +9,10 @@ const config = {
 	idleTimeoutMillis: 26000,
 };
 
-pool = new Pool(config);
+const pool = new Pool(config);
 
 pool.on('connect', (client) => {
-	console.log(`Successful connection to the ${database} database`);
+	console.log(`pg connected`);
 });
 
 pool.on('error', (err, client) => {

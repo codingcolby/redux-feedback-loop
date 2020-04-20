@@ -5,7 +5,6 @@ import App from './components/App/App';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-
 import registerServiceWorker from './registerServiceWorker';
 
 const feelingReducer = (state = '', action) => {

@@ -3,15 +3,13 @@ import { connect } from 'react-redux';
 
 class UnderstandingPage extends Component {
 	state = {
-		currentunderstanding: {
-			understanding: '',
-		},
+		understanding: '',
 	};
 
 	onInputChange = (input) => (event) => {
 		this.setState(
 			{
-				[input]: event.target.value,
+				[input]: parseInt(event.target.value),
 			},
 			() => {
 				console.log(this.state);
@@ -30,10 +28,8 @@ class UnderstandingPage extends Component {
 		return (
 			<div>
 				<h2>How well are you understanding the content today?</h2>
-				<p>
-					Please select a value between 1-5
-					<br /> 1 = not at all and 5 = I got this!
-				</p>
+				<p>Please select a value between 1-5 </p>
+				<p className='App-scale'>1 = not at all and 5 = I got this!</p>
 				<input
 					type='number'
 					required

@@ -9,16 +9,10 @@ router.post('/', (req, res) => {
     feeling, understanding, support, comments)
 	VALUES ($1, $2, $3, $4)`;
 
-	// let feedbacks = '';
-
-	// for (let feedback of req.body.feedbacks) {
-	// 	feedbacks += `${feeling.feeling} ${understanding.understanding} ${support.support} ${comments.comments},`;
-	// }
-
 	pool
 		.query(queryString, [
-			req.body.feeling.feeling,
-			req.body.understanding.understanding,
+			req.body.feeling,
+			req.body.understanding,
 			req.body.support,
 			req.body.comments,
 		])

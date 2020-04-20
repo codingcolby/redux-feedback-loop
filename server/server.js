@@ -12,10 +12,10 @@ app.use(express.static('build'));
 
 /** ---------- EXPRESS ROUTES ---------- **/
 app.use('/feedback', feedbackRouter);
-app.use('/*', (req, res) => {
-	console.log('Here you are');
-	res.sendStatus(200);
-});
+// app.use('/*', (req, res) => {
+// 	console.log('Here you are');
+// 	res.sendStatus(200);
+//  });
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

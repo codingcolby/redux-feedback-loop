@@ -9,7 +9,7 @@ class FeelingPage extends Component {
 	onInputChange = (input) => (event) => {
 		this.setState(
 			{
-				[input]: event.target.value,
+				[input]: parseInt(event.target.value),
 			},
 			() => {
 				console.log(this.state);
@@ -28,12 +28,11 @@ class FeelingPage extends Component {
 		return (
 			<div>
 				<h2>How are you feeling today?</h2>
-				<p>
-					Please select a value between 1-5
-					<br /> 1 = not so good and 5 = fantastic
-				</p>
+				<p>Please select a value between 1-5</p>
+				<p className='App-scale'> 1 = not so good and 5 = fantastic</p>
 				<input
 					type='number'
+					required
 					onChange={this.onInputChange('feeling')}
 					placeholder='Rank your feeling'
 				/>
