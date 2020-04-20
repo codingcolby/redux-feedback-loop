@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../Pages.css';
 
 class FeelingPage extends Component {
 	state = {
@@ -32,16 +33,16 @@ class FeelingPage extends Component {
 				<p className='App-scale'> 1 = not so good and 5 = fantastic</p>
 				<input
 					type='number'
-					required
+					min='1'
+					max='5'
 					onChange={this.onInputChange('feeling')}
-					placeholder='Rank your feeling'
+					placeholder='#'
 				/>
 				<button onClick={this.onNextClick}>Next</button>
 			</div>
 		);
 	}
 }
-
 const mapStoreToProps = (store) => ({ store });
 
 export default connect(mapStoreToProps)(FeelingPage);

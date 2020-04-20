@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import '../Pages.css';
 
 class SubmissionSuccessPage extends Component {
+	state = {
+		submitted: 'submitted',
+	};
+
 	onNextClick = (event) => {
+		this.props.dispatch({ type: 'SET_SUCCESS', payload: this.state });
 		this.props.history.push('/');
 	};
 
@@ -11,7 +17,7 @@ class SubmissionSuccessPage extends Component {
 
 		return (
 			<div>
-				<h2>Thank you</h2>
+				{/* <h2>Thank you</h2> */}
 				<p>Your feedback is important and has been successfully submitted</p>
 
 				<p>
@@ -19,7 +25,9 @@ class SubmissionSuccessPage extends Component {
 					use the button below
 				</p>
 
-				<button onClick={this.onNextClick}>Leave New Feedback</button>
+				<button className='newfeedback-btn' onClick={this.onNextClick}>
+					Leave New Feedback
+				</button>
 			</div>
 		);
 	}

@@ -32,9 +32,11 @@ class SupportPage extends Component {
 				<p className='App-scale'>1 = not at all and 5 = You got me!</p>
 				<input
 					type='number'
+					min='1'
+					max='5'
 					required
 					onChange={this.onInputChange('support')}
-					placeholder='Rank your support'
+					placeholder='#'
 				/>
 				<button onClick={this.onNextClick}>Next</button>
 			</div>

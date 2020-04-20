@@ -9,17 +9,74 @@ import PreSubmitReviewPage from '../Pages/PreSubmitReviewPage/PreSubmitReviewPag
 import SubmissionSuccessPage from '../Pages/SubmissionSuccessPage/SubmissionSuccessPage';
 
 class App extends Component {
+	state = [
+		<div>
+			<header className='App-header'>
+				<h1 className='App-title'>Feedback!</h1>
+				<h4>
+					<i>Don't forget it!</i>
+				</h4>
+			</header>
+			<br />
+		</div>,
+	];
+
+	// viewCheck = (input) => (event) => {
+	// 		if (
+	// 			Router === `Route exact path='/feeling' component={FeelingPage}` ||
+	// 			Router ===
+	// 				`Route exact path='/understanding' component={UnderstandingPage}` ||
+	// 			Router === `Route exact path='/support' component={SupportPage}` ||
+	// 			Router === `Route exact path='/comments' component={CommentsPage}`
+	// 		) {
+	// 			this.setState = [
+	// 					<div>
+	// 						<header className='App-header'>
+	// 							<h1 className='App-title'>Feedback!</h1>
+	// 							<h4>
+	// 								<i>Don't forget it!</i>
+	// 							</h4>
+	// 						</header>
+	// 						<br />
+	// 					</div>
+	// 					]
+	// 			}
+	// 		}
+
+	// 	if (
+	// 		Router ===
+	// 		`Route exact path='/feedbackreview' component={PreSubmitReviewPage}`
+	// 	) {
+	// 		this.setState = [
+	// 			<div>
+	// 				<header>
+	// 					<h1 className='App-title'>Review Your Feedback</h1>
+	// 				</header>
+	// 				<br />
+	// 			</div>,
+	// 		]
+	// 	}
+	// }
+
+	// 	if (
+	// 		Router ===
+	// 		`Route exact path='/feedbackreview' component={PreSubmitReviewPage}`
+	// 	) {
+	// 		this.setState = [
+	// 			<div>
+	// 				<header>
+	// 					<h1 className='App-title'>Thank You!</h1>
+	// 				</header>
+	// 				<br />
+	// 			</div>,
+	// 		];
+	// 	}
+
 	render() {
 		return (
 			<div className='App'>
 				<Router>
-					<header className='App-header'>
-						<h1 className='App-title'>Feedback!</h1>
-						<h4>
-							<i>Don't forget it!</i>
-						</h4>
-					</header>
-					<br />
+					{this.state}
 					<Route exact path='/' component={FeelingPage} />
 					<Route exact path='/understanding' component={UnderstandingPage} />
 					<Route exact path='/support' component={SupportPage} />

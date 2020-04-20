@@ -29,6 +29,7 @@ class CommentsPage extends Component {
 			<div>
 				<h2>Any comments you want to leave?</h2>
 				<input
+					className='commentsinput'
 					type='text'
 					onChange={this.onInputChange('comments')}
 					placeholder='Please share - help us help you!'

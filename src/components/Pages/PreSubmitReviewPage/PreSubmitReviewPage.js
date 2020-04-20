@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 class PreSubmitReviewPage extends Component {
+	state = {
+		reviewcomplete: 'reviewcomplete',
+	};
+
 	submitFeedback = (event) => {
 		const feedback = {
 			feeling: this.props.store.feelingReducer.feeling,
@@ -11,10 +15,13 @@ class PreSubmitReviewPage extends Component {
 			comments: this.props.store.commentsReducer.comments,
 		};
 
+		this.props.dispatch({ type: 'SET_REVIEW', payload: this.state });
+
 		axios
 			.post('/feedback', feedback)
 			.then((response) => {
 				console.log(response.data);
+
 				this.props.history.push('/submissionsuccess');
 			})
 			.catch((err) => {

@@ -35,12 +35,28 @@ const commentsReducer = (state = '', action) => {
 	return state;
 };
 
+const reviewReducer = (state = '', action) => {
+	if (action.type === 'SET_REVIEW') {
+		return action.payload;
+	}
+	return state;
+};
+
+const successReducer = (state = '', action) => {
+	if (action.type === 'SET_SUCCESS') {
+		return action.payload;
+	}
+	return state;
+};
+
 const storeInstance = createStore(
 	combineReducers({
 		feelingReducer,
 		understandingReducer,
 		supportReducer,
 		commentsReducer,
+		reviewReducer,
+		successReducer,
 	}),
 	applyMiddleware(logger)
 );
