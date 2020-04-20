@@ -4,7 +4,9 @@
 
 This feedback form requires three anonymous numeric scale ratings: 1) to establish a students' self-ranked overall comfort level, 2) grasp of the content presented, 3) whether they feel like they are receiving the support resources they expect.
 
-Optionally, the student may include free-form text comments. Students have the opportunity to review a summary of their entries prior to submmitting their feedback. In addition, after submission, the student may retake the feedback survey.
+Optional: the student may include free-form text comments.
+
+Students have the opportunity to review a summary of their entries prior to submmitting their feedback. In addition, after submission, the student may retake the feedback survey.
 
 ### GETTING STARTED
 
@@ -23,6 +25,8 @@ After confirming the server is running without error, open a separte terminal wi
 npm run client
 ```
 
-<!--
-Temporarily parked for quick reference while building out the README - to be removed before final code commit
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md) -->
+Additional dependencies need to be installed, please refer to the package.json file.
+
+### TECHNOLOGIES
+
+This project uses HTML/CSS, JavaScript, Node, Express, BodyParser, React, Redux, Axios, Postgres, SQL
